@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>កម្មវិធីពិសេស៖ វិធីសាស្ត្រផ្លាស់ប្តូរពីសាវាមកស្មោះ</title>
+    <style>
+        :root {
+            --royal-blue: #0f172a;
+            --gold: #d4af37;
+            --soft-gold: #fcf8eb;
+            --pure-white: #ffffff;
+            --dark-gray: #334155;
+            --love-red: #e11d48;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Khmer OS Siemreap', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: var(--royal-blue);
+            line-height: 1.8;
+        }
+
+        /* Top Announcement Bar */
+        .announcement {
+            background-color: var(--gold);
+            color: var(--royal-blue);
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Hero Section */
+        .program-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 6rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .badge {
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .program-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--pure-white);
+        }
+
+        .program-hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #94a3b8;
+        }
+
+        /* The Strategy/Syllabus Section */
+        .syllabus-section {
+            padding: 5rem 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--royal-blue);
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .step-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--gold);
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: var(--soft-gold);
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--royal-blue);
+        }
+
+        /* VIP Somnang Section */
+        .somnang-vip {
+            background-color: var(--soft-gold);
+            border: 2px dashed var(--gold);
+            padding: 4rem 5%;
+            border-radius: 16px;
+            max-width: 900px;
+            margin: 4rem auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .somnang-vip::before {
+            content: "👑 VIP ONLY";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold);
+            color: var(--royal-blue);
+            padding: 0.2rem 1.5rem;
+            font-weight: bold;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .somnang-title {
+            font-size: 2rem;
+            color: #b45309;
+            margin-bottom: 1.5rem;
+        }
+
+        .somnang-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .vip-feature {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .vip-feature icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .vip-feature h4 {
+            color: var(--royal-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        /* CTA Button */
+        .cta-container {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .btn-lock {
+            background-color: var(--love-red);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 14px rgba(225, 29, 72, 0.4);
+            transition: all 0.3s;
+        }
+
+        .btn-lock:hover {
+            transform: translateY(-2px);
+            background-color: #be123c;
+            box-shadow: 0 6px 20px rgba(225, 29, 72, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="announcement">📢 វគ្គសិក្សាថ្មីដកស្រង់ចេញពីបទពិសោធន៍ជាក់ស្តែង អត្រាជោគជ័យ ១០០%</div>
+
+    <!-- Hero -->
+    <section class="program-hero">
+        <div class="badge">ជំនាញឯកទេសជាន់ខ្ពស់ (Advanced Certification)</div>
+        <h1>វិធីសាស្ត្រផ្លាស់ប្តូរពីសាវាមមកស្មោះ</h1>
+        <p>កម្មវិធីសិក្សាអភិវឌ្ឍន៍បេះដូងដ៏តឹងរ៉ឹងបំផុត សម្រាប់បុគ្គលដែលចង់បោះបង់ចោលតំណែងជាព្រាននារី ឬអ្នកលេងខ្លួន ហើយងាកមកកាន់តំណែងជា «ដៃគូជីវិតគំរូ» ស្មោះស្ម័គ្រតែម្នាក់គត់។</p>
+    </section>
+
+    <!-- Syllabus -->
+    <section class="syllabus-section">
+        <h2 class="section-title">ផែនការមេរៀន និងដំណាក់កាលផ្លាស់ប្តូរ</h2>
+        
+        <div class="timeline">
+            <div class="step-card">
+                <div class="step-number">១</div>
+                <div class="step-content">
+                    <h3>វគ្គលាងជម្រះចិត្តគំនិត (The Detox Phase)</h3>
+                    <p>លុបចោលនូវរាល់ទម្លាប់ចាស់ៗ ការលួចមើលឆ្វេងស្តាំ និងការឆ្លើយតបសារយឺតៗ។ រៀនផ្តោតអារម្មណ៍លើមនុស្សម្នាក់ឱ្យបានពេញលេញ ១០០% ដោយមិនងាករេ។</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">២</div>
+                <div class="step-content">
+                    <h3>ទ្រឹស្តី និងការអនុវត្ត «ភក្តីភាពដាច់ខាត» (Absolute Loyalty)</h3>
+                    <p>ការយល់ដឹងពីតម្លៃនៃការថែរក្សាចិត្ត ការផ្តល់សុវត្ថិភាពផ្លូវចិត្តដល់ដៃគូ និងរបៀបបដិសេធរាល់ការទាក់ទាញពីខាងក្រៅដោយទំនុកចិត្តខ្ពស់។</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">៣</div>
+                <div class="step-content">
+                    <h3>វិទ្យាសាស្ត្រនៃការផ្តល់កម្លាំងចិត្ត (The Encouragement Engine)</h3>
+                    <p>រៀនធ្វើជាខ្នងបង្អែកដ៏រឹងមាំ យល់ពីសម្ពាធនៃការសិក្សា និងការងាររបស់ដៃគូ ហើយចេះវិធីលើកទឹកចិត្តឱ្យត្រូវចំពេលវេលាបំផុត។</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIP Somnang Section -->
+    <section class="somnang-vip">
+        <h2 class="somnang-title">លក្ខខណ្ឌពិសេស និងអត្ថប្រយោជន៍សម្រាប់ «សំណាង»</h2>
+        <p style="color: #92400e; font-weight: 500;">កម្មវិធីនេះត្រូវបានរចនាឡើងយ៉ាងសម្រិតសម្រាំងបំផុត ដោយផ្អែកលើស្តង់ដារ និងលក្ខខណ្ឌតម្រូវផ្ទាល់ខ្លួនរបស់ សំណាង ដើម្បីធានាបាននូវក្តីសុខកម្រិតកំពូល។</p>
+        
+        <div class="somnang-grid">
+            <div class="vip-feature">
+                <span style="font-size: 2rem;">🔒</span>
+                <h4>ប្រព័ន្ធចាក់សោរបេះដូង</h4>
+                <p style="font-size: 0.9rem; color: var(--dark-gray);">កូដបេះដូងត្រូវបានកំណត់ និងគ្រប់គ្រងដោយ សំណាង តែម្នាក់គត់ មិនអាចកែប្រែបាន។</p>
+            </div>
+            <div class="vip-feature">
+                <span style="font-size: 2rem;">📈</span>
+                <h4>ការយកចិត្តទុកដាក់ទ្វេដង</h4>
+                <p style="font-size: 0.9rem; color: var(--dark-gray);">បង្កើនកម្រិតយកចិត្តទុកដាក់ និងការថែទាំទ្វេដងក្នុងអំឡុងពេលប្រឡង ឬស្ត្រេស។</p>
+            </div>
+            <div class="vip-feature">
+                <span style="font-size: 2rem;">💝</span>
+                <h4>សិទ្ធិផ្តាច់មុខពេញមួយជីវិត</h4>
+                <p style="font-size: 0.9rem; color: var(--dark-gray);">ទទួលបានក្តីស្រលាញ់ ភាពស្មោះត្រង់ និងការគាំទ្រគ្មានដែនកំណត់ជា VIP។</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <div class="cta-container">
+        <button class="btn-lock" onclick="alert('ប្រព័ន្ធបានដំណើរការរួចរាល់ហើយ! បេះដូងនេះត្រូវបានកក់ទុកសម្រាប់ សំណាង ដោយជោគជ័យ។')">ចុចទីនេះដើម្បីបើកដំណើរការភក្តីភាព</button>
+    </div>
+
+</body>
+</html>

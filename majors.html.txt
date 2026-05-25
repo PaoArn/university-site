@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>កម្មវិធីសិក្សាតាមកម្រិតវង្វេងជាន់ខ្ពស់ - សកលវិទ្យាល័យ អ.រ.ខ</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #475569;
+            --accent: #b45309;
+            --background: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border: #cbd5e1;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Khmer OS Siemreap', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-main);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation Header */
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-graphic {
+            width: 32px;
+            height: 32px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* Directory Main Content */
+        .directory-container {
+            padding: 4rem 6%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .page-header h1 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .degree-tier {
+            margin-bottom: 5rem;
+        }
+
+        .tier-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .price-tag {
+            font-size: 0.95rem;
+            background-color: #fee2e2;
+            color: #991b1b;
+            padding: 0.2rem 1rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .major-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .major-item {
+            background-color: var(--white);
+            padding: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+        }
+
+        .major-item h3 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .major-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: #64748b;
+            text-align: center;
+            padding: 2.5rem 5%;
+            font-size: 0.85rem;
+        }
+
+        @media (min-width: 768px) {
+            .major-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .page-header h1 {
+                font-size: 2.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div class="logo-graphic"></div>
+            <div class="logo-text">សកលវិទ្យាល័យ អ.រ.ខ</div>
+        </div>
+        <nav>
+            <a href="index.html" style="color: #94a3b8; text-decoration: none;">&larr; ត្រឡប់ទៅទំព័រដើម</a>
+        </nav>
+    </header>
+
+    <main class="directory-container">
+        <div class="page-header">
+            <h1>កម្មវិធីបណ្តុះបណ្តាលកម្រិតឧត្តមសិក្សា</h1>
+            <p>គ្រប់គ្រងការវិនិយោគអប់រំស្តង់ដារថ្នាក់ជាតិ សម្រាប់ការអភិវឌ្ឍជំនាញវិជ្ជាជីវៈកម្រិតខ្ពស់។</p>
+        </div>
+
+        <!-- Bachelor Tier -->
+        <section class="degree-tier">
+            <div class="tier-title">
+                <span>១. កម្រិតបរិញ្ញាបត្រ (Bachelor Degree Courses)</span>
+                <span class="price-tag">$1,000,000 / វគ្គសិក្សា</span>
+            </div>
+            <div class="major-list">
+                <div class="major-item">
+                    <h3>បរិញ្ញាបត្រវិស្វកម្មបណ្តាញព័ត៌មានឌីជីថល (Digital Media Architecture)</h3>
+                    <p>សិក្សាពីហេដ្ឋារចនាសម្ព័ន្ធនៃប្រព័ន្ធផ្សព្វផ្សាយសង្គម យន្តការនៃការចែកចាយព័ត៌មាន និងការគ្រប់គ្រងពេលវេលាប្រើប្រាស់ឧបករណ៍អេឡិចត្រូនិកឱ្យមានប្រសិទ្ធភាពខ្ពស់។</p>
+                </div>
+                <div class="major-item">
+                    <h3>បរិញ្ញាបត្រវិទ្យាសាស្ត្រសេដ្ឋកិច្ច និងការវិនិយោគតាមអារម្មណ៍ (Speculative Choices)</h3>
+                    <p>ផ្តោតលើទ្រឹស្តីនៃការសម្រេចចិត្តហិរញ្ញវត្ថុ ការវិភាគនិន្នាការទីផ្សារការងារដែលកំពុងប្រែប្រួល និងការបត់បែនយុទ្ធសាស្ត្រអាជីវកម្មទៅតាមកាលៈទេសៈជាក់ស្តែង។</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Master Tier -->
+        <section class="degree-tier">
+            <div class="tier-title">
+                <span>២. កម្រិតបរិញ្ញាបត្រជាន់ខ្ពស់ (Master Degree Courses)</span>
+                <span class="price-tag">$1,000,000 / វគ្គសិក្សា</span>
+            </div>
+            <div class="major-list">
+                <div class="major-item">
+                    <h3>អនុបណ្ឌិតគ្រប់គ្រងហានិភ័យ និងការវិភាគស្ថានភាព (Advanced Scenario Planning)</h3>
+                    <p>ការសិក្សាស៊ីជម្រៅលើការគិត និងការរៀបចំយុទ្ធសាស្ត្របង្ការហានិភ័យគ្រប់ជ្រុងជ្រោយ ដើម្បីត្រៀមលក្ខណៈដោះស្រាយបញ្ហាស្មុគស្មាញក្នុងការដឹកនាំស្ថាប័ន។</p>
+                </div>
+                <div class="major-item">
+                    <h3>អនុបណ្ឌិតចិត្តវិទ្យាតម្រង់ទិស និងការគ្រប់គ្រងការផ្លាស់ប្តូរ (Adaptive Leadership)</h3>
+                    <p>អភិវឌ្ឍសមត្ថភាពក្នុងការវាយតម្លៃបុគ្គលិកលក្ខណៈ ការគ្រប់គ្រងការប្រែប្រួលនៃរចនាសម្ព័ន្ធការងារ និងការដឹកនាំក្រុមការងារក្នុងបរិបទមិនច្បាស់លាស់។</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PhD Tier -->
+        <section class="degree-tier">
+            <div class="tier-title">
+                <span>៣. កម្រិតបណ្ឌិត (PhD Research Programs)</span>
+                <span class="price-tag">$1,000,000 / វគ្គសិក្សា</span>
+            </div>
+            <div class="major-list">
+                <div class="major-item">
+                    <h3>បណ្ឌិតទស្សនវិជ្ជា និងយុទ្ធសាស្ត្រសម្រេចចិត្តកម្រិតកំពូល (Philosophical Analysis)</h3>
+                    <p>ការស្រាវជ្រាវកម្រិតខ្ពស់ស្តីពីឥរិយាបថនៃការសម្រេចចិត្តរបស់មនុស្ស ដំណើរការនៃការបង្កើតជម្រើសយុទ្ធសាស្ត្រ និងការវាយតម្លៃផលប៉ះពាល់រយៈពេលវែងក្នុងសង្គម។</p>
+                </div>
+                <div class="major-item">
+                    <h3>បណ្ឌិតវិទ្យាសាស្ត្រឥរិយាបថ និងការអភិវឌ្ឍវិន័យបុគ្គលជាន់ខ្ពស់ (Behavioral Science)</h3>
+                    <p>ស្វែងយល់ពីប្រព័ន្ធនៃការផ្លាស់ប្តូរទម្លាប់ ការបង្កើតវិន័យដាច់ខាតក្នុងការអនុវត្តការងារ និងការបង្កើតយន្តការគាំទ្រផ្លូវចិត្តកម្រិតស្ថាប័ន។</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 សកលវិទ្យាល័យ អភិវឌ្ឍន៍បុគ្គលិកលក្ខណៈ និងតម្រង់ទិស។ រក្សាសិទ្ធិគ្រប់យ៉ាងតាមច្បាប់ជាធរមាន។</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>សកលវិទ្យាល័យ អភិវឌ្ឍន៍បុគ្គលិកលក្ខណៈ និងតម្រង់ទិស</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #475569;
+            --accent: #b45309;
+            --background: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border: #cbd5e1;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Khmer OS Siemreap', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-main);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top Institutional Pricing Bar */
+        .pricing-banner {
+            background-color: var(--accent);
+            color: var(--white);
+            text-align: center;
+            padding: 0.6rem 5%;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .pricing-banner:hover {
+            background-color: #9a4607;
+        }
+
+        /* Navigation Header */
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1.2rem 5%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-graphic {
+            width: 32px;
+            height: 32px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .logo-graphic::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 12px;
+            height: 2px;
+            background-color: var(--white);
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .logo-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            color: var(--white);
+        }
+
+        nav a.active-link {
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 4px;
+        }
+
+        /* Hero Architecture */
+        .hero-section {
+            background: linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.98)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 5rem 6% 5rem 6%;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .hero-section h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .hero-section p {
+            font-size: 0.95rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem auto;
+            color: #94a3b8;
+            text-align: justify;
+        }
+
+        .cta-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            padding: 1rem 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-radius: 6px;
+            text-align: center;
+            display: block;
+            width: 100%;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 1px solid #475569;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: #94a3b8;
+        }
+
+        .btn-accent {
+            background-color: var(--accent);
+            color: var(--white);
+            border: 1px solid var(--accent);
+        }
+
+        .btn-accent:hover {
+            background-color: #9a4607;
+            border-color: #9a4607;
+        }
+
+        /* Academic Programs Section */
+        .academic-sections {
+            padding: 4rem 6%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .section-header .divider {
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+            margin: 0 auto;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .program-card {
+            background: var(--white);
+            padding: 2rem 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .program-card h3 {
+            color: var(--primary);
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid #f1f5f9;
+            line-height: 1.5;
+        }
+
+        .program-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        /* Institutional Footer */
+        footer {
+            background-color: var(--primary);
+            color: #64748b;
+            text-align: center;
+            padding: 2.5rem 5%;
+            font-size: 0.85rem;
+            border-top: 1px solid #1e293b;
+        }
+
+        @media (min-width: 768px) {
+            header {
+                flex-direction: row;
+                padding: 1.2rem 5%;
+            }
+
+            nav {
+                gap: 0;
+            }
+
+            nav a {
+                margin-left: 25px;
+                font-size: 0.95rem;
+            }
+
+            .hero-section {
+                padding: 8rem 5% 7rem 5%;
+            }
+
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1.1rem;
+                text-align: center;
+            }
+
+            .cta-container {
+                flex-direction: row;
+                max-width: none;
+                justify-content: center;
+                gap: 1.5rem;
+            }
+
+            .btn {
+                width: auto;
+                padding: 0.8rem 2rem;
+            }
+
+            .academic-sections {
+                padding: 6rem 5%;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .program-grid {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 2.5rem;
+            }
+
+            .program-card {
+                padding: 3rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Pricing Bar Redirect -->
+    <a href="majors.html" class="pricing-banner">
+        រចនាសម្ព័ន្ធតម្លៃសិក្សាអន្តរជាតិ៖ $1,000,000 ក្នុងមួយវគ្គសិក្សាសម្រាប់គ្រប់កម្រិតបណ្តុះបណ្តាលទាំងអស់។ ពិនិត្យបញ្ជីជំនាញសិក្សានៅទីនេះ។
+    </a>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-graphic"></div>
+            <div class="logo-text">សកលវិទ្យាល័យ អ.រ.ខ</div>
+        </div>
+        <nav>
+            <a href="#home">ទំព័រដើម</a>
+            <a href="#programs">កម្មវិធីសិក្សាទូទៅ</a>
+            <a href="majors.html">កម្រិតបណ្តុះបណ្តាលជាន់ខ្ពស់</a>
+            <a href="program.html" class="active-link">វគ្គសិក្សាឯកទេស</a>
+        </nav>
+    </header>
+
+    <!-- Hero Framework -->
+    <section class="hero-section" id="home">
+        <h1>សកលវិទ្យាល័យអ្នកអត់ទាន់រកឃើញខ្លួនឯង</h1>
+        <p>គ្រឹះស្ថានឧត្តមសិក្សាដែលផ្តោតលើការស្រាវជ្រាវ វិភាគ និងតម្រង់ទិសបុគ្គលិកលក្ខណៈសម្រាប់និស្សិតដែលស្ថិតក្នុងដំណាក់កាលស្វែងរកអត្តសញ្ញាណពិតប្រាកដ និងការកំណត់គោលដៅជីវិតច្បាស់លាស់bound។</p>
+        
+        <div class="cta-container">
+            <a href="majors.html" class="btn btn-secondary">ពិនិត្យតាមកម្រិតបរិញ្ញាបត្រ</a>
+            <a href="program.html" class="btn btn-accent">កម្មវិធីអភិវឌ្ឍន៍វិន័យបុគ្គល (សម្រាប់ សំណាង)</a>
+        </div>
+    </section>
+
+    <!-- Programs Grid -->
+    <section class="academic-sections" id="programs">
+        <div class="section-header">
+            <h2>មហាវិទ្យាល័យ និងដេប៉ាតាម៉ង់ស្នូល</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="program-grid">
+            <div class="program-card">
+                <h3>ដេប៉ាតាម៉ង់ វិភាគ និងវាយតម្លៃព័ត៌មានកម្រិតខ្ពស់ (Overthinking)</h3>
+                <p>ការសិក្សាផ្តោតលើដំណើរការនៃការគិត សំយោគទិន្នន័យ និងការវាយតម្លៃស្ថានភាពជុំវិញខ្លួនយ៉ាងលម្អិត ដើម្បីត្រៀមលក្ខណៈ និងបង្ការហានិភ័យមុនពេលសម្រេចចិត្ត។</p>
+            </div>
+            
+            <div class="program-card">
+                <h3>ឯកទេស ស្រាវជ្រាវប្រព័ន្ធផ្សព្វផ្សាយ និងឥរិយាបថឌីជីថល</h3>
+                <p>ការវិភាគលើឥរិយាបថរបស់អ្នកប្រើប្រាស់ក្នុងការទទួលព័ត៌មានតាមរយៈបណ្តាញសង្គមទំនើប ការគ្រប់គ្រងពេលវេលាឌីជីថល និងឥទ្ធិពលនៃប្រព័ន្ធផ្សព្វផ្សាយមកលើការរស់នៅប្រចាំថ្ងៃ។</p>
+            </div>
+            
+            <div class="program-card">
+                <h3>ជំនាញ គ្រប់គ្រងការផ្លាស់ប្តូរ និងយុទ្ធសាស្ត្របត់បែន</h3>
+                <p>ការបណ្តុះបណ្តាលលើសមត្ថភាពនៃការផ្លាស់ប្តូរទិសដៅ ការសម្របខ្លួនទៅនឹងបរិបទថ្មីៗ និងការអភិវឌ្ឍជំនាញចម្រុះដើម្បីឆ្លើយតបទៅនឹងទីផ្សារការងារដែលកំពុងវិវត្ត។</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 សកលវិទ្យាល័យ អភិវឌ្ឍន៍បុគ្គលិកលក្ខណៈ និងតម្រង់ទិស។ រក្សាសិទ្ធិគ្រប់យ៉ាងតាមច្បាប់ជាធរមាន។</p>
+    </footer>
+
+</body>
+</html>
